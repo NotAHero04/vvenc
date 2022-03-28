@@ -1,3 +1,7 @@
+Small patches for compiling for Android (by using Termux for instance).
+
+Note that this encoder will **only accept raw YUV 4:2:0 video**!
+
 # Fraunhofer Versatile Video Encoder (VVenC)
 
 The Fraunhofer Versatile Video Encoder (VVenC) is a fast and efficient H.266/VVC encoder implementation with the following main features:
