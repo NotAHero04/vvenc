@@ -225,7 +225,9 @@ int VVEncImpl::uninit()
   }
 
 #if defined( __linux__ )
-  malloc_trim(0);   // free unused heap memory
+  #ifndef __ANDROID__
+    malloc_trim(0);   // free unused heap memory
+  #endif
 #endif
 
   m_bInitialized = false;
@@ -394,7 +396,9 @@ int VVEncImpl::encode( vvencYUVBuffer* pcYUVBuffer, vvencAccessUnit* pcAccessUni
   }
 
 #if defined( __linux__ )
-  malloc_trim(0);   // free unused heap memory
+  #ifndef __ANDROID__
+    malloc_trim(0);   // free unused heap memory
+  #endif
 #endif
 
   return iRet;
